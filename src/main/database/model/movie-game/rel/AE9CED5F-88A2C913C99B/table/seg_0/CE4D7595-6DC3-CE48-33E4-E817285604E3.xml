@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CE4D7595-6DC3-CE48-33E4-E817285604E3" name="MG_HINT_TYPES">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:05:14 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PK_ID" id="69AD442C-959B-7E1D-664C-C76C188E9D2A">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:05:36 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HINT_NAME" id="93D59DB5-3FDA-069D-EFF8-A045CB131CB3">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:09:26 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODE_ID" id="9C2D5536-5E87-EB2D-9DBF-976A1A617C74">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:08:43 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HINT_COST" id="4048F930-452C-15E2-33F9-763B2979AB59">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 13:00:09 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEQ_ID" id="9E196003-0A6E-0DEF-564F-0852FEB90156">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:56:03 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVE" id="E5942E96-238D-CEF7-A2CC-664DDF81071B">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:54:16 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_BY" id="93DC7AB3-F590-994B-555D-3B8D4DB93256">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:05:53 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_ON" id="CA7C8EC5-FA39-7685-1D27-6CCC4C949056">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:05:53 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_UPDATED_BY" id="B755B580-5E8E-3BAF-86EB-1EB95DF2796D">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:05:53 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_UPDATED_ON" id="D914E292-EF52-FFC3-0133-74DB561F3403">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:06:24 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EB1354F6-2132-EEE2-AF32-074B85204288" name="MG_HINT_TYPES_PK">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:05:36 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69AD442C-959B-7E1D-664C-C76C188E9D2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="652B66F9-33F4-6C9E-5ED2-454F9AE2134A" name="MG_HINT_TYPES_CODE_ID_UN">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 12:13:28 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C2D5536-5E87-EB2D-9DBF-976A1A617C74"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,1 @@
+create sequence mg_movies_seq;

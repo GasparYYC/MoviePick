@@ -1,0 +1,1 @@
+create sequence mg_hint_types_seq;

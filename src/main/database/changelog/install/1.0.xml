@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+  <!-- tables -->
+
+  <changeSet id="ct_mg_movies" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/ct_mg_movies.sql" />
+  </changeSet>
+  <changeSet id="ct_mg_hint_types" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/ct_mg_hint_types.sql" />
+  </changeSet>
+
+
+  <!-- sequences -->
+
+  <changeSet id="mg_movies_seq" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/mg_movies_seq.sql" />
+  </changeSet>
+  <changeSet id="mg_hint_types_seq" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/mg_hint_types_seq.sql" />
+  </changeSet>
+
+</databaseChangeLog>

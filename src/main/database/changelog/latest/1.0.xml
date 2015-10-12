@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+  <!-- packages -->
+
+  <changeSet id="mg_tmdb_api_pkg" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_tmdb_api_pkg.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_tmdb_api_pkg.pkb.sql" />
+  </changeSet>
+  <changeSet id="mg_movies_pkg" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_movies_pkg.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_movies_pkg.pkb.sql" />
+  </changeSet>
+
+
+  <!-- triggers -->
+
+  <changeSet id="auto_generate_table_triggers" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/trigger/auto_generate_table_triggers.sql" />
+  </changeSet>
+
+
+  <!-- views -->
+
+  <changeSet id="mg_movie_data_vw" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile path="src/main/database/latest/view/mg_movie_data_vw.sql" />
+  </changeSet>
+
+</databaseChangeLog>

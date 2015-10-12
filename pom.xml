@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.contribute.apex</groupId>
+  <artifactId>apex-movie-game</artifactId>
+  <version>1.0</version>
+
+  <parent>
+    <groupId>com.contribute.apex</groupId>
+    <artifactId>apex-movie-game-parent</artifactId>
+    <version>1.0</version>
+    <relativePath>parent_pom.xml</relativePath>
+  </parent>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+
+      <properties>
+        <database.url>jdbc:oracle:thin:@localhost:1521/pdbapex5.contribute.be</database.url>
+        <database.username>dev_movie_game</database.username>
+        <database.password>${settings.servers.dev_movie_game.password}</database.password>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>tst</id>
+
+      <properties>
+        <database.url>jdbc:oracle:thin:@localhost:1521/pdbapex5.contribute.be</database.url>
+        <database.sqlplusUrl>localhost:1521/pdbapex5.contribute.be</database.sqlplusUrl>
+        <database.username>tst_movie_game</database.username>
+        <database.password>${settings.servers.tst_movie_game.password}</database.password>
+        <apex.workspace>tst_movie_game</apex.workspace>
+        <apex.appid>1010</apex.appid>
+      </properties>
+    </profile>
+  </profiles>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>com.contribute</groupId>
+        <artifactId>orclapex-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

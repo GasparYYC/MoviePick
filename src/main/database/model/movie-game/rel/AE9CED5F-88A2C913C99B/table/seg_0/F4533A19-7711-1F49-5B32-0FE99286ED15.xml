@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F4533A19-7711-1F49-5B32-0FE99286ED15" name="MG_MOVIES">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-08 19:55:00 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PK_ID" id="D2E90486-1AD0-BD8D-FF48-787B6CA82BD1">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-08 19:56:45 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TMDB_ID" id="6AC558AD-E071-5BAA-4EB2-14F975FB60A6">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-08 20:01:20 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITLE" id="06AC9F0C-846E-0811-4E7E-4EFC519C3AD3">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 11:14:26 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVE" id="DC1BFF8F-BB36-B485-A616-6FD6B4FF6996">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 11:19:11 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_BY" id="4611D1BD-F88E-E867-1DEE-172CF246D63E">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 11:08:00 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_ON" id="17CF5E3A-9C52-4B7D-69C8-EAB453E7E5A1">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 11:08:00 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_UPDATED_BY" id="EBE905A7-A372-ED01-8D2E-B33F49AD405A">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 11:08:00 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_UPDATED_ON" id="F559D316-9DBB-0C3F-5C8B-8CE4B325D764">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 11:08:00 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F2A4A978-E3D1-7D3F-D88B-EB54156DF202" name="MG_MOVIES_PK">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-08 19:56:45 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2E90486-1AD0-BD8D-FF48-787B6CA82BD1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0128AE38-B54B-66F5-136C-360E4CF507D0" name="MG_MOVIES_TMDB_ID_UN">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-09 11:11:56 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AC558AD-E071-5BAA-4EB2-14F975FB60A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
