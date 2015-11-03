@@ -1,0 +1,1 @@
+create sequence mg_game_rounds_seq;

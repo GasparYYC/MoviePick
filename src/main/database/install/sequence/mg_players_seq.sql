@@ -1,0 +1,1 @@
+create sequence mg_players_seq;

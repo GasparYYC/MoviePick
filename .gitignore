@@ -1,2 +1,4 @@
 *.komodoproject
 *.komodotool
+src/main/apex
+target

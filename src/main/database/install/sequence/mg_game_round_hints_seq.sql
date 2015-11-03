@@ -1,0 +1,1 @@
+create sequence mg_game_round_hints_seq;

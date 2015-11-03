@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8DD50F90-1585-E48B-D62F-66322449A9FE" name="MG_ROUND_HINTS_HINT_TYPES_FK">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:38:35 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<containerWithKeyObject>E43075A3-F80A-CF54-CF96-A278060D2B82</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>8D6F089F-1357-0096-512C-412761CD2D61</localFKIndex>
+<keyObject>EB1354F6-2132-EEE2-AF32-074B85204288</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

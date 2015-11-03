@@ -4,6 +4,13 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
 
-
+  <changeSet id="hint_types" author="nick.buytaert">
+    <sqlFile path="src/main/database/data/hint_types.sql" />
+  </changeSet>
+  <!--
+  <changeSet id="movies" author="nick.buytaert">
+    <sqlFile path="src/main/database/data/movies.sql" />
+  </changeSet>
+  -->
 
 </databaseChangeLog>

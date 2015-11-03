@@ -1,5 +1,19 @@
 create or replace package body mg_movies_pkg is
 
+  function movie_id_by_tmdb_id(
+    in_tmdb_id in mg_movies.tmdb_id%type
+  ) return mg_movies.pk_id%type is
+    l_movie_pk_id mg_movies.pk_id%type;
+  begin
+    select pk_id
+    into l_movie_pk_id
+    from mg_movies
+    where tmdb_id = in_tmdb_id;
+
+    return l_movie_pk_id;
+  end movie_id_by_tmdb_id;
+
+
   function random_tmdb_id
   return mg_movies.tmdb_id%type is
     l_random_tmdb_id mg_movies.tmdb_id%type;
@@ -10,6 +24,7 @@ create or replace package body mg_movies_pkg is
       select tmdb_id
       from mg_movies
       where active = 1
+      and tmdb_id not in (select tmdb_id from mg_game_rounds_coll_vw)
       order by dbms_random.value)
     where rownum = 1;
 
@@ -32,22 +47,5 @@ create or replace package body mg_movies_pkg is
 
     return l_masked_movie_title;
   end masked_movie_title;
-
-
-  function validate_guess(
-    in_guess in varchar2
-  ) return boolean is
-    l_movie_title mg_movies.title%type;
-    l_is_correct_answer boolean;
-  begin
-    select title
-    into l_movie_title
-    from mg_movie_data_vw;
-
-    l_movie_title := replace(l_movie_title, ' ', '');
-    l_is_correct_answer := lower(l_movie_title) = lower(in_guess);
-
-    return l_is_correct_answer;
-  end validate_guess;
 
 end mg_movies_pkg;

@@ -1,0 +1,11 @@
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Year','YEAR',10,10,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Genre(s)','GENRES',10,30,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Director(s)','DIRECTORS',10,40,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Actor 1','ACTOR1',25,50,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Actor 2','ACTOR2',25,60,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Actor 3','ACTOR3',20,70,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Actor 4','ACTOR4',20,80,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Backdrop 1','BACKDROP1',40,90,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Backdrop 2','BACKDROP2',40,100,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Character','CHARACTER',999,110,1);
+insert into mg_hint_types (hint_name,code_id,hint_cost,seq_id,active) values ('Duration','DURATION',5,20,1);

@@ -1,13 +1,23 @@
-CREATE OR REPLACE FORCE VIEW MG_GAME_HIGHSCORES_VW
-AS
-SELECT trim(p.first_name || ' ' || p.last_name) player_name
-     , g.play_date
-     , (select sum(gr.score) from mg_game_rounds gr where gr.fk_game_id = g.pk_id) total_score
-     , (select count(1) from mg_game_round_hints grh, mg_game_rounds gr where gr.fk_game_id = g.pk_id and gr.pk_id = grh.fk_game_round_id) total_nbr_hints
-     , (select sum(hint_cost) from mg_hint_types ht, mg_game_round_hints grh, mg_game_rounds gr where gr.fk_game_id = g.pk_id and gr.pk_id = grh.fk_game_round_id and grh.fk_hint_type_id = ht.pk_id) total_hint_cost
-  FROM mg_players p, mg_games g
- WHERE g.finished = 1
-   AND g.fk_player_id = p.pk_id
- ORDER BY total_score DESC
-;
-  
+create or replace force view mg_game_highscores_vw as
+  select rownum as rank,
+         highscores.*
+  from (
+    select trim(p.name) as player_name,
+           (select sum(gr.score)
+            from mg_game_rounds gr
+            where gr.fk_game_id = g.pk_id) as total_score,
+           (select count(*)
+            from mg_game_round_hints grh, mg_game_rounds gr
+            where gr.fk_game_id = g.pk_id
+            and gr.pk_id = grh.fk_game_round_id) as total_nbr_hints,
+           (select count(*)
+            from mg_games game
+            join mg_game_rounds round on game.pk_id = round.fk_game_id
+            left join mg_guesses guess on round.pk_id = guess.fk_game_round_id
+            where game.pk_id = g.pk_id
+            and guess.correct = 0) as total_nbr_guesses,
+           g.play_date
+    from mg_players p, mg_games g
+    where g.fk_player_id = p.pk_id
+    order by total_score desc
+  ) highscores;

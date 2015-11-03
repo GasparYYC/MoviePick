@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E43075A3-F80A-CF54-CF96-A278060D2B82" name="MG_GAME_ROUND_HINTS">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:34:25 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PK_ID" id="F7AAF3A8-369A-7E9D-F10A-206CA6D619BE">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:37:40 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEQ_ID" id="3681ED2C-2696-96D7-B0EC-173E60EFFA1E">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:37:40 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_GAME_ROUND_ID" id="BBF18AEE-9887-B766-A2BB-C41B89B7BBEF">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:37:55 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>0FAF7001-B23E-85BE-58A2-EAEC60ABD6D2</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1082EDE7-8B73-D32C-1131-8DAE93AEF75D" referredColumn="0FAF7001-B23E-85BE-58A2-EAEC60ABD6D2"/>
+</associations>
+</Column>
+<Column name="FK_HINT_TYPE_ID" id="2CB61077-CE36-A11E-ED61-3E4C047655D5">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:38:35 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>69AD442C-959B-7E1D-664C-C76C188E9D2A</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8DD50F90-1585-E48B-D62F-66322449A9FE" referredColumn="69AD442C-959B-7E1D-664C-C76C188E9D2A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="820B1D58-6C1A-3DAE-5495-5011BCCA2F04" name="MG_GAME_ROUND_HINTS_PK">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:37:40 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7AAF3A8-369A-7E9D-F10A-206CA6D619BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A08979B7-658A-CEB1-1AA6-3440FCA8635B" name="MG_GRH_GAME_ROUND_ID_IDX">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:48:24 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBF18AEE-9887-B766-A2BB-C41B89B7BBEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EE3F8A40-0550-8388-EBF9-2EED3C94A03A" name="MG_GRH_HINT_TYPE_ID_IDX">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:48:24 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CB61077-CE36-A11E-ED61-3E4C047655D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76E339E2-D488-91D4-0F4F-DDE1400C0AA9" name="MG_ROUND_HINTS_GAME_ROUNDS_FK">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:37:55 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBF18AEE-9887-B766-A2BB-C41B89B7BBEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D6F089F-1357-0096-512C-412761CD2D61" name="MG_ROUND_HINTS_HINT_TYPES_FK">
+<createdBy>Nick</createdBy>
+<createdTime>2015-10-18 17:38:35 UTC</createdTime>
+<ownerDesignName>movie-game</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CB61077-CE36-A11E-ED61-3E4C047655D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

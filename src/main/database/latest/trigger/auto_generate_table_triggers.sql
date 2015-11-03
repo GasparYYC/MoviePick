@@ -9,6 +9,10 @@ declare
 begin
   laa_table_names(1)  := 'mg_movies';
   laa_table_names(2)  := 'mg_hint_types';
+  laa_table_names(3)  := 'mg_players';
+  laa_table_names(4)  := 'mg_games';
+  laa_table_names(5)  := 'mg_game_rounds';
+  laa_table_names(6)  := 'mg_guesses';
 
   l_index := laa_table_names.first;
   while l_index is not null loop

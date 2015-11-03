@@ -36,6 +36,19 @@
         <database.username>tst_movie_game</database.username>
         <database.password>${settings.servers.tst_movie_game.password}</database.password>
         <apex.workspace>tst_movie_game</apex.workspace>
+        <apex.appid>1005</apex.appid>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>prd</id>
+
+      <properties>
+        <database.url>jdbc:oracle:thin:@localhost:1521/pdbapex5.contribute.be</database.url>
+        <database.sqlplusUrl>localhost:1521/pdbapex5.contribute.be</database.sqlplusUrl>
+        <database.username>prd_movie_game</database.username>
+        <database.password>${settings.servers.prd_movie_game.password}</database.password>
+        <apex.workspace>prd_movie_game</apex.workspace>
         <apex.appid>1010</apex.appid>
       </properties>
     </profile>

@@ -12,6 +12,31 @@
   <changeSet id="ct_mg_hint_types" author="nick.buytaert">
     <sqlFile path="src/main/database/install/table/ct_mg_hint_types.sql" />
   </changeSet>
+  <changeSet id="ct_mg_players" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/ct_mg_players.sql" />
+  </changeSet>
+  <changeSet id="ct_mg_games" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/ct_mg_games.sql" />
+  </changeSet>
+  <changeSet id="ct_mg_game_rounds" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/ct_mg_game_rounds.sql" />
+  </changeSet>
+  <changeSet id="ct_mg_guesses" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/ct_mg_guesses.sql" />
+  </changeSet>
+  <changeSet id="ct_mg_game_round_hints" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/ct_mg_game_round_hints.sql" />
+  </changeSet>
+
+  <changeSet id="at_mg_players_name_as_single_col" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/at_mg_players_name_as_single_col.sql" />
+  </changeSet>
+  <changeSet id="at_mg_games_drop_finished_col" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/at_mg_games_drop_finished_col.sql" />
+  </changeSet>
+  <changeSet id="at_mg_game_rounds_drop_finished_col" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/at_mg_game_rounds_drop_finished_col.sql" />
+  </changeSet>
 
 
   <!-- sequences -->
@@ -21,6 +46,21 @@
   </changeSet>
   <changeSet id="mg_hint_types_seq" author="nick.buytaert">
     <sqlFile path="src/main/database/install/sequence/mg_hint_types_seq.sql" />
+  </changeSet>
+  <changeSet id="mg_players_seq" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/mg_players_seq.sql" />
+  </changeSet>
+  <changeSet id="mg_games_seq" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/mg_games_seq.sql" />
+  </changeSet>
+  <changeSet id="mg_game_rounds_seq" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/mg_game_rounds_seq.sql" />
+  </changeSet>
+  <changeSet id="mg_guesses_seq" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/mg_guesses_seq.sql" />
+  </changeSet>
+  <changeSet id="mg_game_round_hints_seq" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/mg_game_round_hints_seq.sql" />
   </changeSet>
 
 </databaseChangeLog>

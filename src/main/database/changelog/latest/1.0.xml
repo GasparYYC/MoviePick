@@ -14,6 +14,14 @@
     <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_movies_pkg.pks.sql" />
     <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_movies_pkg.pkb.sql" />
   </changeSet>
+  <changeSet id="mg_hints_pkg" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_hints_pkg.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_hints_pkg.pkb.sql" />
+  </changeSet>
+  <changeSet id="mg_game_logic_pkg" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_game_logic_pkg.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/mg_game_logic_pkg.pkb.sql" />
+  </changeSet>
 
 
   <!-- triggers -->
@@ -21,12 +29,27 @@
   <changeSet id="auto_generate_table_triggers" author="nick.buytaert" runOnChange="true" runAlways="true">
     <sqlFile splitStatements="false" path="src/main/database/latest/trigger/auto_generate_table_triggers.sql" />
   </changeSet>
+  <changeSet id="mg_game_round_hints_bri_trg" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/trigger/mg_game_round_hints_bri_trg.sql" />
+  </changeSet>
 
 
   <!-- views -->
 
-  <changeSet id="mg_movie_data_vw" author="nick.buytaert" runOnChange="true" runAlways="true">
-    <sqlFile path="src/main/database/latest/view/mg_movie_data_vw.sql" />
+  <changeSet id="mg_game_rounds_coll_vw" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile path="src/main/database/latest/view/mg_game_rounds_coll_vw.sql" />
+  </changeSet>
+  <changeSet id="mg_game_round_hints_coll_vw" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile path="src/main/database/latest/view/mg_game_round_hints_coll_vw.sql" />
+  </changeSet>
+  <changeSet id="mg_game_round_guesses_coll_vw" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile path="src/main/database/latest/view/mg_game_round_guesses_coll_vw.sql" />
+  </changeSet>
+  <changeSet id="mg_game_highscores_vw" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile path="src/main/database/latest/view/mg_game_highscores_vw.sql" />
+  </changeSet>
+  <changeSet id="mg_game_movies_corr_guessed_vw" author="nick.buytaert" runOnChange="true" runAlways="true">
+    <sqlFile path="src/main/database/latest/view/mg_game_movies_corr_guessed_vw.sql" />
   </changeSet>
 
 </databaseChangeLog>
