@@ -11,6 +11,10 @@
   <changeSet id="movies" author="nick.buytaert">
     <sqlFile path="src/main/database/data/movies.sql" />
   </changeSet>
+
+  <changeSet id="movies1.1" author="nick.buytaert">
+    <sqlFile path="src/main/database/data/movies1.1.sql" />
+  </changeSet>
   -->
 
 </databaseChangeLog>

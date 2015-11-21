@@ -35,11 +35,17 @@ create or replace package body mg_movies_pkg is
   function masked_movie_title(
     in_movie_title in mg_movies.title%type
   ) return mg_movies.title%type is
+    l_char varchar2(1);
     l_masked_movie_title mg_movies.title%type;
   begin
     for i in 1 .. length(in_movie_title) loop
-      if substr(in_movie_title, i, 1) = ' ' then
+      l_char := substr(in_movie_title, i, 1);
+
+      if l_char = ' ' then
         l_masked_movie_title := l_masked_movie_title || '_';
+      -- show special characters (issue #16)
+      elsif l_char in (':', '.', '/', '''', '&', '-') then
+        l_masked_movie_title := l_masked_movie_title || l_char;
       else
         l_masked_movie_title := l_masked_movie_title || 'X';
       end if;
